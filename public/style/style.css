@@ -1,0 +1,84 @@
+body{
+    /* background-color: #F8E0E0; */
+    background-image: linear-gradient(to right, black  0% , black 50% , orange  50% , orange 100%);
+font-family: 'Libre Baskerville', serif;
+
+}
+.items{
+    display: flex;
+    align-items: center;
+    margin: 0px 14px;
+}
+ 
+span{
+    color: white;
+}
+img{
+    width: 24px;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+}
+
+h1{
+    text-align: center;
+}
+
+.todoentry{
+    border: 0;
+    border-bottom: 2px solid rgb(72, 72, 72);
+    background-color:transparent ;
+    margin: 10px 10px 10px 40px;
+    width: 20%;
+    outline: 0;
+    font-size: 1.2rem;
+
+
+}
+.todoentry:hover{
+    border-bottom: 2px solid rgb(115, 88, 214);
+}
+
+.container{
+    position: relative;
+    background-color: #F5F5F5;
+    width: 50%;
+    border-radius: 12px;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.title{
+margin-bottom: 34px;
+text-align: center;
+
+ 
+}
+
+
+p{
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+  } 
+.anchorStyle{
+    color: inherit;
+}
+/* .todayclass{
+    position: absolute;
+    left: 45%;
+    color: rgb(136, 52, 52);
+    font-size: 1.5rem;
+    margin-bottom: 23px;
+} */
+hr{
+    border: 0;
+    display:block;
+    width: 96%; 
+    border-bottom: 1px dashed #ccc;
+    
+}

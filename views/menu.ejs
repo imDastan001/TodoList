@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Roboto+Slab&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <h1> <span>TO-D</span>O list</h1>
+    <div class="title container">
+        <h2><%=custom%></h2>  
+    </div>
+    <div class="container">
+        <div class="items">
+            <form class="items">
+          <input type='checkbox' class='checkmes'/>
+          <p><a class="anchorStyle" href="/">Today</a></p>   
+        </form>
+
+        </div>
+        <hr/>
+          <%if(locals.htmlContent){%>
+          <% htmlContent.forEach(element => {%>
+
+            <div class="items">
+              <form action="/menudelete" method="post" class="items">
+            <input type='checkbox' class='checkmes' value="<%= element._id %>" name="check" onChange="this.form.submit()"/>
+            <p><a class="anchorStyle" href="/<%-element.name%>"><%-element.name%></a></p>   
+            <input type="hidden" value="<%=custom%>" name="hiddencheckbox">
+          </form>
+
+          </div>
+          <hr/>
+            
+
+          <%}); %>
+
+          <%}%>
+    
+      <form action="/menusubmit" method="post">
+        <img src="./images/add_circle_FILL0_wght400_GRAD0_opsz48.png"alt="button">
+        <input type="input" placeholder="Enter todo" name="inputfield" class="todoentry" />
+      </form>
+    </div>
+  </body>
+</html>
